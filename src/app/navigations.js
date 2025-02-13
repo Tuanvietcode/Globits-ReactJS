@@ -18,6 +18,30 @@ export const navigations = [
         icon: "remove",
         isVisible: true,
       },
+      {
+        name: "Phòng ban",
+        path: ConstantList.ROOT_PATH + "category/department",
+        icon: "remove",
+        isVisible: true,
+    },
+    {
+        name: "Nhân viên",
+        path: ConstantList.ROOT_PATH + "category/staff",
+        icon: "remove",
+        isVisible: true,
+    },
+    {
+        name: "Dự án",
+        path: ConstantList.ROOT_PATH + "category/project",
+        icon: "remove",
+        isVisible: true,
+    },
+    {
+        name: "Bảng chấm công",
+        path: ConstantList.ROOT_PATH + "category/time-sheet",
+        icon: "remove",
+        isVisible: true,
+    }
       
     ],
   },

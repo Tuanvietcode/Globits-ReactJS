@@ -6,6 +6,10 @@ import dashboardRoutes from "./views/dashboard/DashboardRoutes";
 // import roleRoutes from "./views/Role/RoleRoutes";
 import ConstantList from "./appConfig";
 import countryRoutes from "./views/Country/CountryRoutes";
+import departmentRoutes from "./views/Department/DepartmentRoutes";
+import staffRoutes from "./views/Staff/StaffRoutes";
+import projectRoutes from "./views/Project/ProjectRoutes";
+import timeSheetRoutes from "./views/TimeSheet/TimeSheetRoutes";
 
 const redirectRoute = [
   {
@@ -28,6 +32,10 @@ const routes = [
   // ...userRoutes,
   // ...roleRoutes,
   ...countryRoutes,
+  ...departmentRoutes,
+  ...staffRoutes,
+  ...projectRoutes,
+  ...timeSheetRoutes,
   ...errorRoute,
 ];
 
