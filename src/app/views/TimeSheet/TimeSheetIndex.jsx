@@ -256,7 +256,7 @@ export default observer(function TimeSheetIndex() {
                         </div>
                         <div className={classes.search}>
                             <InputBase
-                                placeholder="Search…"
+                                placeholder="Tìm kiếm......."
                                 classes={{
                                     root: classes.inputRoot,
                                     input: classes.inputInput,

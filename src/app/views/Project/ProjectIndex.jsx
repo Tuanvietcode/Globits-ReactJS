@@ -156,7 +156,7 @@ export default observer(function StaffIndex() {
             </Button>
             <div className={classes.search}>
                 <InputBase
-                    placeholder="search…"
+                    placeholder="Tìm kiếm......."
                     classes={{
                         root: classes.inputRoot, input: classes.inputInput,
                     }}
