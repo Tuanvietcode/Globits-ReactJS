@@ -155,6 +155,15 @@ export default observer(function DepartmentIndex() {
 
   const columns = [
     {
+      title: 'STT', render: (rowData) => rowData.tableData.id + 1,
+      cellStyle: {
+          paddingLeft: "10px",
+      },
+      headerStyle: {
+          paddingLeft: "10px",
+      }
+  },
+    {
       title: 'Phòng ban trực thuộc',
       render: (rowData) => rowData?.parent?.name ? rowData?.parent?.name : "Không có"
 

@@ -156,6 +156,15 @@ export default observer(function TimeSheetIndex() {
 
     const columns = [
         {
+            title: 'STT', render: (rowData) => rowData.tableData.id + 1,
+            cellStyle: {
+                paddingLeft: "10px",
+            },
+            headerStyle: {
+                paddingLeft: "10px",
+            }
+        },
+        {
             title: "Hành động", render: (rowData) => (<MaterialButton
                 item={rowData}
                 onEdit={setShouldOpenEditorDialog}

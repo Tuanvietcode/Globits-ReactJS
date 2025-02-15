@@ -160,6 +160,12 @@ export default observer(function StaffIndex() {
     const columns = [
         {
             title: 'STT', render: (rowData) => rowData.tableData.id + 1,
+            cellStyle: {
+                paddingLeft: "10px",
+            },
+            headerStyle: {
+                paddingLeft: "10px",
+            }
         },
         { title: 'Họ', field: 'firstName' },
         { title: 'Tên', field: 'lastName' },
