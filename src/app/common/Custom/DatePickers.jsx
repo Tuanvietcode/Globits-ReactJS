@@ -43,10 +43,16 @@ export default function DatePickers({
             <Grid
                 className={className}
                 style={{
-                    border: "1px solid #e4e4e4", borderRadius: "4px", padding: '8px'
+                    border: "1px solid #d1d1d1",
+                    borderRadius: "8px",
+                    padding: '12px',
+                    boxShadow: "0px 2px 8px rgba(0, 0, 0, 0.1)",
+                    backgroundColor: "#fff",
+                    display: "flex",
+                    flexDirection: "column",
+                    gap: "10px",
                 }}
             >
-                
                 <KeyboardDatePicker
                     label={labelDate}
                     format={format}
@@ -57,12 +63,20 @@ export default function DatePickers({
                     }}
                     InputProps={{
                         disableUnderline: true,
-                        style: { paddingLeft: '14px' },
+                        style: {
+                            padding: '10px',
+                            borderRadius: '6px',
+                            border: "1px solid #ccc",
+                            backgroundColor: "#fafafa",
+                            transition: "border-color 0.3s",
+                        },
+                        onFocus: (e) => e.target.style.border = "1px solid #3f51b5",
+                        onBlur: (e) => e.target.style.border = "1px solid #ccc",
                     }}
                     InputLabelProps={{
-                        style: { paddingLeft: '14px' },
+                        style: { paddingLeft: '8px', fontWeight: "bold" },
                     }}
-                    style={{ width: '100%', marginBottom: '8px' }}
+                    style={{ width: '100%' }}
                 />
 
                 {isTime && (
@@ -75,7 +89,15 @@ export default function DatePickers({
                         }}
                         InputProps={{
                             disableUnderline: true,
-                            style: { paddingLeft: '14px' },
+                            style: {
+                                padding: '10px',
+                                borderRadius: '6px',
+                                border: "1px solid #ccc",
+                                backgroundColor: "#fafafa",
+                                transition: "border-color 0.3s",
+                            },
+                            onFocus: (e) => e.target.style.border = "1px solid #3f51b5",
+                            onBlur: (e) => e.target.style.border = "1px solid #ccc",
                         }}
                         style={{ width: '100%' }}
                     />

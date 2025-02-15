@@ -54,7 +54,7 @@ const useStyles = makeStyles((theme) => ({
         alignItems: "center",
         height: "100%",
         padding: theme.spacing(0, 1),
-        backgroundColor: "#01c0c8",
+        backgroundColor: "#64b5f6",
         borderTopRightRadius: theme.shape.borderRadius,
         borderBottomRightRadius: theme.shape.borderRadius,
     }, inputInput: {
@@ -150,8 +150,10 @@ export default observer(function StaffIndex() {
                     setSelected(null)
 
                 }}
+                style={{ backgroundColor: "#90caf9", color: "#000" }}
+
             >
-                Thêm mới <AddCircleOutlineOutlinedIcon />
+                Thêm
             </Button>
             <div className={classes.search}>
                 <InputBase

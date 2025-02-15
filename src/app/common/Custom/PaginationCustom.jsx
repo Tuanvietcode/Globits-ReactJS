@@ -39,7 +39,7 @@ export default function PaginationCustom(
         totalPages,
         page,
         handleChangePage,
-        pageSizeOption = [10, 15, 20, 25, 30],
+        pageSizeOption = [5, 10, 20, 30, 50],
         store,
     }
 ) {
