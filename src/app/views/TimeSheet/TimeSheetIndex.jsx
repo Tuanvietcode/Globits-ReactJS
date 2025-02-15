@@ -319,9 +319,8 @@ export default observer(function TimeSheetIndex() {
                         }}
                         disabled={projectStore.selected === null}
                         style={{ backgroundColor: "#90caf9", color: "#000" }}
-
                     >
-                        Thêm
+                        Thêm 
                     </Button>
                     <TableCustom
                         rowsPerPage={rowsPerPage}

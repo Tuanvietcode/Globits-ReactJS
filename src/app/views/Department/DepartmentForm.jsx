@@ -29,30 +29,48 @@ const useStyles = makeStyles((theme) => ({
     gap: 10,
     marginTop: 10,
   },
+  cancelButton: {
+    backgroundColor: "#ccc",
+    color: "#333",
+    fontSize: "16px",
+    padding: theme.spacing(1.5, 3),
+    "&:hover": {
+      backgroundColor: "#e0e0e0",
+    },
+  },
+  submitButton: {
+    backgroundColor: '#90caf9',
+    color: "#000",
+    fontSize: "16px",
+    padding: theme.spacing(1.5, 3),
+    "&:hover": {
+      backgroundColor: theme.palette.primary.dark,
+    },
+  },
   dialogTitle: {
-    backgroundColor: "#01c0c8",
+    backgroundColor: "#90caf9",
 
   }, dialogTitleText: {
-    color: "#ffffff",  
-    fontWeight: "bold",  
-    fontSize: "18px",  
+    color: "#000",
+    fontWeight: "bold",
+    fontSize: "18px",
   },
   parent: {
     marginBottom: theme.spacing(2),
     marginTop: theme.spacing(2),
     width: "100%",
-    position: "relative", 
+    position: "relative",
   },
   parentTextField: {
     marginBottom: theme.spacing(2),
     width: "100%",
   },
   parentButton: {
-    position: "absolute", 
+    position: "absolute",
     top: -10,
     right: 0,
-    backgroundColor: "#01c0c8",
-    color: "#ffffff",
+    backgroundColor: "#90caf9",
+    color: "#000",
   }
 
 }));
@@ -298,11 +316,11 @@ function DepartmentForm() {
               />
             </div>
             <div className={classes.wapperButton}>
-              <Button variant="contained" color="inherit"
+              <Button variant="contained" className={classes.cancelButton}
                 onClick={() => setShouldOpenEditorDialog(false)}>
                 Hủy
               </Button>
-              <Button type="submit" variant="contained" color="inherit">
+              <Button type="submit" variant="contained" className={classes.submitButton}>
                 {selectedDepartment?.id ? "Cập nhật" : "Thêm"}
               </Button>
             </div>

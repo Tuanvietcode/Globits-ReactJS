@@ -36,6 +36,24 @@ const useStyles = makeStyles((theme) => ({
         gap: 10,
         marginTop: 10,
     },
+    cancelButton: {
+        backgroundColor: "#ccc",
+        color: "#333",
+        fontSize: "16px", 
+        padding: theme.spacing(1.5, 3),
+        "&:hover": {
+            backgroundColor: "#e0e0e0",
+        },
+    },
+    submitButton: {
+        backgroundColor: '#90caf9',
+        color: "#000",
+        fontSize: "16px", 
+        padding: theme.spacing(1.5, 3),
+        "&:hover": {
+            backgroundColor: theme.palette.primary.dark,
+        },
+    },
     addFamilyMemberBtn: {
         position: "absolute",
         top: 0,
@@ -209,13 +227,13 @@ export default observer(function ProjectForm() {
                                 />
                                 </div>
                                 <div className={classes.wapperButton}>
-                                    <Button variant="contained" color="inherit"
+                                    <Button variant="contained" className={classes.cacelButton}
                                         onClick={() => {
                                             setShouldOpenEditorDialog(false)
                                         }}>
                                         Hủy
                                     </Button>
-                                    <Button type="submit" variant="contained" color="inherit">
+                                    <Button type="submit" variant="contained" className={classes.submitButton}>
                                         {selected?.id ? "Cập nhật" : "Thêm"}
                                     </Button>
                                 </div>

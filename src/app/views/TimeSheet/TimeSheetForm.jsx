@@ -34,7 +34,27 @@ const useStyles = makeStyles((theme) => ({
         width: "45%",
     }, wapperButton: {
         display: "flex", justifyContent: "center", gap: 10, marginTop: 10,
-    }, addFamilyMemberBtn: {
+    },
+
+    cancelButton: {
+        backgroundColor: "#ccc",
+        color: "#333",
+        fontSize: "16px",
+        padding: theme.spacing(1.5, 3),
+        "&:hover": {
+            backgroundColor: "#e0e0e0",
+        },
+    },
+    submitButton: {
+        backgroundColor: '#90caf9',
+        color: "#000",
+        fontSize: "16px",
+        padding: theme.spacing(1.5, 3),
+        "&:hover": {
+            backgroundColor: theme.palette.primary.dark,
+        },
+    },
+    addFamilyMemberBtn: {
         position: "absolute",
         top: 0,
         right: 0,
@@ -167,7 +187,7 @@ export default observer(function TimeSheetForm() {
                             format={"MM/dd/yyyy hh:mm"}
                             className={classes.itemInput}
                         />
-                        
+
                         <Autocomplete
                             multiple
                             options={Array.isArray(projectStore?.selected?.projectStaff) ? projectStore?.selected?.projectStaff : []}
@@ -227,13 +247,13 @@ export default observer(function TimeSheetForm() {
                         </FormControl>
                     </div>
                     <div className={classes.wapperButton}>
-                        <Button variant="contained" color="inherit"
+                        <Button variant="contained" className={classes.cacelButton}
                             onClick={() => {
                                 setShouldOpenEditorDialog(false)
                             }}>
                             Hủy
                         </Button>
-                        <Button type="submit" variant="contained" color="inherit">
+                        <Button type="submit" variant="contained" className={classes.submitButton}>
                             {selected?.id ? "Update" : "Save"}
                         </Button>
                     </div>

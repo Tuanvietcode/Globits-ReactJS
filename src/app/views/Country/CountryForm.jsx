@@ -8,7 +8,7 @@ import { useStore } from "../../stores";
 
 const useStyles = makeStyles((theme) => ({
     dialogContent: {
-        width: "500px", // 📌 Tăng chiều rộng form
+        width: "500px", 
         padding: theme.spacing(3),
     },
     wrapper: {
@@ -40,18 +40,18 @@ const useStyles = makeStyles((theme) => ({
         marginTop: theme.spacing(4),
     },
     cancelButton: {
-        backgroundColor: "#f5f5f5",
+        backgroundColor: "#ccc",
         color: "#333",
-        fontSize: "16px", // 📌 Nút bấm to hơn
+        fontSize: "16px", 
         padding: theme.spacing(1.5, 3),
         "&:hover": {
             backgroundColor: "#e0e0e0",
         },
     },
     submitButton: {
-        backgroundColor: theme.palette.primary.main,
-        color: "#fff",
-        fontSize: "16px", // 📌 Nút bấm to hơn
+        backgroundColor: '#90caf9',
+        color: "#000",
+        fontSize: "16px", 
         padding: theme.spacing(1.5, 3),
         "&:hover": {
             backgroundColor: theme.palette.primary.dark,
